@@ -1,0 +1,46 @@
+body {
+    background-color: white;
+    background-image: url(../images/backgrounds/windows_vista_beta_5.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: oldblox;
+    color: white;
+}
+
+@font-face {
+    font-family: oldblox;
+    src: url(assets/fonts/fart.ttf) auto !important;
+}
+
+.webtitle {
+    background-color: rgba(107, 106, 106, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    margin-left: 750px;
+    text-align: center;
+}
+
+.welcome {
+    background-color: rgba(107, 106, 106, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 350px;
+    height: auto;
+}
+
+.mail {
+    color: lightblue;
+}
+
+.footer {
+    background-color: rgba(54, 54, 54, 0.5);
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 10px;
+    right: 880px;
+    padding: 5px;
+    border-radius: 10px;
+}
