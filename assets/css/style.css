@@ -1,6 +1,6 @@
 body {
     background-color: white;
-    background-image: url(../images/backgrounds/windows_vista_beta_5.jpg);
+    background-image: url(../images/backgrounds/windows_vista_beta_8.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -40,7 +40,6 @@ body {
     text-align: center;
     position: fixed;
     bottom: 10px;
-    right: 880px;
     padding: 5px;
     border-radius: 10px;
 }

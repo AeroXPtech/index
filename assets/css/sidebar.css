@@ -67,7 +67,7 @@
 .navbar-top {
     position: fixed;
     left: -50;
-    top: -10;
+    top: -40;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.438);
     padding: 20px;
