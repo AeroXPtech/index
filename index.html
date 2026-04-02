@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AeroXPtech's Place</title>
+    <title>AeroXPtech's Place - Home</title>
     <link rel="stylesheet" href="assets/css/sidebar.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -38,20 +38,90 @@
 <main>
     <section>
         <article class="welcome">
-            <p>Welcome !<br>This Is A Website About Me i will Add Things but You Might Ask Why or how and is it hard<br>And here is the Answer to why how and if its hard<br><br>
-                Why: Cause i Have Fun<br>
-                How: VScode And Youtube<br>
-                is it hard: No If You Know What You Do<br><br>
-                Any ideas? Then <a class="mail" href="aeroxptech@gmail.com">Mail Me</a><br><br>
-                will i do Tiktok or Youtube? Yes ! i Do Tiktok (username: aeroxptech.css)<br>
-                If You Want To Know me better Then Go To the <a class="mail" href="aboutme.html">About Me Tab</a></p>
+            <h3 class="welcomemms"><strong>Welcome to My Site!</strong></h3>
+
+            <p><br>
+                Hello, when i first saw Themes or even Styles that where used in Websites 
+                i Was Charmed these Themes were so called "WebGloss 2.0" 
+                which was used on websites that had a Gloss or Aqua interface, 
+                like macOS 10.1 to macOS 10.9, before it became a flat design (Sadly).  
+            </p>
+
+            <h3 class="welcomemms"><strong>Inspo</strong></h3>
+
+            <p><br>
+                i Got the Inspo from "https://frutigeraeroarchive.org/" and "https://daniele63.com" both Websites From
+                the User Daniele63 man love that guy (not in a Wierd way) 
+            </p>
+
+            <h3 class="welcomemms"><strong>Websites I recommend</strong></h3>
+
+            <p><br>
+                Learn HTML CSS And JS Basics etc (HTMLDog.com)<br>
+                Youtube Tutorials (Youtube.com)<br>
+                more links <a href="https://frutigeraeroarchive.org/resources" class="mail">here</a> (Scroll Down Till Web Development Tools)
+            </p>
+
+            <h3 class="welcomemms"><strong>About This Site</strong></h3>
+
+            <p><br>
+                This website was originally 
+                intended to be a page about me and a kind of WebGloss 2.0,
+                but as we see the end product,
+                I will hopefully be able to change it.
+            </p>
+
+            <h3 class="welcomemms"><strong>Plans And ideas</strong></h3>
+
+            <p><br>
+                my idea is to add more Sidebar Elements and more things to discover 
+                and maybe try to make a theme Changer probably idk
+            </p>
+
+            <h3 class="welcomemms">FAA RSS</h3>
+
+            <div id="rss-feed">Loading RSS...</div>
+
+            <h3 class="welcomemms">Tech i own</h3>
+
+            <p><br>
+                i own a iPhone 4, iPhone SE , iPad Mini 4, Samsung S10e, Samsung A05s, 
+                Samsung Watch 3 (classic), 3DS (red), Nintendo DSi, macbook pro 13 Inch Late 2013 (silver), 
+                Nintendo Switch OLED, SNES, NES (Classic Made in China) and Thats it i think
+            </p>
         </article>
     </section>
 </main>
 
 
 <footer class="footer">
-    <p>Made By Techy32</p>
+    <p>Made By Techy32 | 2026</p>
 </footer>
+<script>
+fetch("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://frutigeraeroarchive.org/rss/blog.xml"))
+  .then(res => res.json())
+  .then(data => {
+    if (data.status !== "ok") throw new Error("RSS error");
+
+    let html = "<ul class='rss-list'>";
+
+    data.items.slice(0, 5).forEach(item => {
+      html += `
+        <li>
+          <a href="${item.link}" target="_blank">
+            ${item.title}
+          </a>
+        </li>
+      `;
+    });
+
+    html += "</ul>";
+    document.getElementById("rss-feed").innerHTML = html;
+  })
+  .catch(err => {
+    document.getElementById("rss-feed").innerText = "RSS failed (proxy blocked)";
+    console.error(err);
+  });
+</script>
 </body>
 </html>
