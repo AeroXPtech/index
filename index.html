@@ -93,6 +93,13 @@
             <h3 class="welcomemms"><strong>Updates</strong></h3>
 
             <p>02.04.2026<br>Added Blured Gloss<br><br></p>
+
+            <h3 class="welcomemms">things i Recommend</h3>
+
+            <p><br>
+              VScode: Make Simple HTML CSS JS or even Python or C++
+              thats it i have no ideas exept Github for Publishing Your Web
+            </p>
         </article>
     </section>
 </main>
@@ -109,7 +116,7 @@ fetch("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("http
 
     let html = "<ul class='rss-list'>";
 
-    data.items.slice(0, 5).forEach(item => {
+    data.items.slice(0, 6).forEach(item => {
       html += `
         <li>
           <a href="${item.link}" target="_blank">
